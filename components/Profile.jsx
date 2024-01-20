@@ -50,7 +50,9 @@ export default function Profile() {
           <DriverAvailable />
         ) : (
           <div>
-            <button onClick={handleClick}>Book Ambulance</button>
+            <button className={styles.btn} onClick={handleClick}>
+              Book Ambulance
+            </button>
           </div>
         )}
       </div>

@@ -1,16 +1,15 @@
 /* Import Google Fonts --------------------------------------- */
 /* font-family: 'Montserrat', sans-serif; */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* font-family: 'Open Sans', sans-serif; */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
 
 /* font-family: 'Poppins', sans-serif; */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* NavBar ----------------------------------------------------------- */
-.navContainer{
+.navContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,44 +21,42 @@
   left: 0;
   right: 0;
   z-index: 10;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
-.navContainer .leftPart{
+.navContainer .leftPart {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.navContainer .leftPart .navLogo{
+.navContainer .leftPart .navLogo {
   height: 30px;
   width: 30px;
 }
-.navContainer .leftPart .navLogoName{
+.navContainer .leftPart .navLogoName {
   font-size: 1.25rem;
   font-style: italic;
   font-weight: 700;
-  letter-spacing: .8px;
+  letter-spacing: 0.8px;
   cursor: pointer;
   color: rgb(69, 68, 68);
   text-decoration: none;
 }
-.navContainer .leftPart .navLogoColor{
-  color: #F75023;
+.navContainer .leftPart .navLogoColor {
+  color: #f75023;
   font-weight: 800;
 }
-.navContainer .rightPart{
+.navContainer .rightPart {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.navContainer .rightPart .navBullets{
+.navContainer .rightPart .navBullets {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-
-
-.homeContainer{
+.homeContainer {
   display: flex;
   /* justify-content: center; */
   align-items: center;
@@ -68,7 +65,7 @@
 }
 
 /* Login Section ----------------------------------------------------------- */
-.loginContainer{
+.loginContainer {
   box-shadow: 2px 2px 5px 2px rgb(211, 209, 209);
   display: flex;
   justify-content: center;
@@ -77,28 +74,28 @@
   border-radius: 10px;
   background: white;
 }
-.loginContainer h2{
-  font-family: 'Montserrat', sans-serif;
+.loginContainer h2 {
+  font-family: "Montserrat", sans-serif;
   margin-left: 25px;
   font-size: 1.25rem;
-  color: #F75023;
+  color: #f75023;
 }
-.loginContainer .loginInputBox{
+.loginContainer .loginInputBox {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 10px 20px 30px;
 }
-.loginContainer input{
+.loginContainer input {
   width: 250px;
   padding: 8px 20px;
   margin: 5px 0px;
   outline: none;
   border: 1px solid #9e9e9e;
 }
-.loginContainer button{
-  background: #F75023;
+.loginContainer button {
+  background: #f75023;
   color: white;
   border: 0px;
   padding: 10px 30px;
@@ -106,26 +103,27 @@
   margin-top: 20px;
   cursor: pointer;
 }
-.registerText{
-  font-family: 'Open Sans', sans-serif;
-  font-size: .8rem;
+.registerText {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.8rem;
   margin-top: 10px;
 }
-.registerText span{
+.registerText span {
   color: rgb(26, 111, 239);
   font-weight: 700;
   cursor: pointer;
 }
 
 /* Dashboard -------------------------------------------------------- */
-.dashboardContainer{
+.dashboardContainer {
   display: flex;
   align-items: center;
   flex-direction: column;
   margin-top: 80px;
 }
-.profileContainer{
+.profileContainer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: white;
@@ -133,90 +131,101 @@
   box-shadow: 2px 2px 5px 2px rgb(211, 209, 209);
   border-radius: 10px;
 }
-.profileLeft{
-
+.profileLeft {
 }
-.profileLeft .profileDp{
+.profileLeft .profileDp {
   width: 150px;
   height: 150px;
   border-radius: 50%;
 }
-.profileRight{
+.profileRight {
   display: flex;
   justify-content: center;
   flex-direction: column;
   margin-left: 60px;
 }
-.profileRight .authorName{
-  color: #F75023;
+.profileRight .authorName {
+  color: #f75023;
   font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.2rem;
 }
-.profileRight .authorId{
-  font-family: 'Montserrat', sans-serif;
-  font-size: .9rem;
+.profileRight .authorId {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
   margin-top: 2px;
 }
 
+.btn {
+  background-color: #f75023;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
 
-
-
+.reqContainer {
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+}
 
 /* Media Queries --------------------------------------------------------- */
 
-@media (max-width: 650px){
-  .navContainer .leftPart .navLogoName{
-    font-size: .9rem;
+@media (max-width: 650px) {
+  .navContainer .leftPart .navLogoName {
+    font-size: 0.9rem;
   }
-  .navContainer .rightPart .navBullets{
-    font-size: .8rem;
+  .navContainer .rightPart .navBullets {
+    font-size: 0.8rem;
   }
 }
 
-@media (max-width: 590px){
-  .profileContainer{
+@media (max-width: 590px) {
+  .profileContainer {
     padding: 15px 30px 15px 20px;
     box-shadow: 2px 2px 5px 2px rgb(211, 209, 209);
     border-radius: 10px;
   }
-  .profileLeft .profileDp{
+  .profileLeft .profileDp {
     width: 120px;
     height: 120px;
   }
-  .profileRight{
+  .profileRight {
     margin-left: 30px;
   }
 }
-@media (max-width: 470px){
-  .profileContainer{
+@media (max-width: 470px) {
+  .profileContainer {
     flex-direction: column;
     padding: 25px 30px;
     box-shadow: 2px 2px 5px 2px rgb(211, 209, 209);
     border-radius: 10px;
   }
-  .profileLeft .profileDp{
+  .profileLeft .profileDp {
     width: 140px;
     height: 140px;
   }
-  .profileRight{
+  .profileRight {
     margin: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .profileRight .authorName{
+  .profileRight .authorName {
     font-size: 1.1rem;
     margin-top: 15px;
   }
-  .profileRight .authorId{
-    font-size: .8rem;
+  .profileRight .authorId {
+    font-size: 0.8rem;
     margin-top: 2px;
   }
 }
 
-.authorType{
-  color: #F75023;
+.authorType {
+  color: #f75023;
   font-weight: 600;
   margin: 15px 0px;
   font-variant: small-caps;

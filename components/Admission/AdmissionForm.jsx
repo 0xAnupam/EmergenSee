@@ -18,7 +18,7 @@ const AdmissionForm = () => {
     e.preventDefault();
 
     try {
-      await axios.post("/api/ambulances", {
+      await axios.patch("/api/ambulances", {
         id,
         patientName,
         dob,
