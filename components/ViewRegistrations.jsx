@@ -1,4 +1,6 @@
 function Registrations(props){
+    const reg_id = props.id;
+
     return(
     <div id="registrationsCard">
         <div id="registCompo">

@@ -84,16 +84,16 @@ body {
   }
 }
 
-select{
+select {
   padding: 8px 20px;
 }
-.o2div{
+.o2div {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.o2Support{
-  font-size: .8rem;
+.o2Support {
+  font-size: 0.8rem;
   margin-right: 10px;
 }
 #notifPage #notifHeader{
