@@ -5,7 +5,7 @@ import Head from "next/head";
 import { PrimeReactProvider } from "primereact/api";
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 import { ConfirmDialog } from "primereact/confirmdialog";
-
+import '../styles/try.css'
 export default function App({ Component, pageProps }) {
   return (
     <>

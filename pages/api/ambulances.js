@@ -28,6 +28,7 @@ export default async function handler(req, res) {
       foundUser.requests = foundUser.requests.concat({
         ambulance: savedAmbulance,
       });
+      await foundUser.save();
       return res.status(200).send(savedAmbulance);
     } catch (err) {
       console.log(err);
