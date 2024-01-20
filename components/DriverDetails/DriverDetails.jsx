@@ -1,9 +1,12 @@
+import AuthContext from "@/store/AuthContext";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import { useContext, useEffect, useState } from "react";
 
 function Details(props) {
   const reg_id = props.reg_id;
   console.log(reg_id);
+  const router = useRouter();
 
   async function handleClick() {
     const data = {
@@ -20,6 +23,7 @@ function Details(props) {
       })
       .then((res) => {
         console.log(res.data);
+        router.push("/temp")
       });
     props.onDriverData(data);
   }

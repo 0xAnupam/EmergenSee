@@ -23,7 +23,7 @@ export default function Navbar() {
         authCtx.updateAuthenticationStatus(false);
       })
       .catch((err) => {
-        console.log(err);
+        toast.error(err);
       });
   };
 

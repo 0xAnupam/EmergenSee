@@ -31,10 +31,10 @@ export default function Profile() {
             {authCtx.isAuthenticated && authCtx.userData.name}
           </span>
           <span className={styles.authorId}>
-            {authCtx.isAuthenticated && authCtx.userData.email}
+          User Mail -{authCtx.isAuthenticated && authCtx.userData.email}
           </span>
           <span className={styles.authorId}>
-            {authCtx.isAuthenticated && authCtx.userData._id}
+            User ID -{authCtx.isAuthenticated && authCtx.userData._id}
           </span>
           <span className={styles.authorType}>
             {authCtx.isAuthenticated &&

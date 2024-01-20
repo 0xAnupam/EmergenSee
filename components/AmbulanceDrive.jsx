@@ -60,7 +60,7 @@ const MapComponent = () => {
       const userMarker = L.marker(userLocation).addTo(map);
 
       // Get the hospital ID from the user (this will need to be implemented)
-      const hospitalId = 'hospital4'; // Default hospital
+      const hospitalId = 'hospital1'; // Default hospital
 
       // Get the coordinates for the selected hospital
       const hospitalCoords = hospitalLocations[hospitalId];

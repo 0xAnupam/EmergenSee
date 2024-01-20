@@ -28,8 +28,7 @@ export default function Register({ onLogin, onDriver }) {
         onLogin();
     }
     catch(err){
-        console.log(err);
-        // toast.error(err);
+        toast.error(err);
     }finally{
         toast.success("User registered successfully");
     }

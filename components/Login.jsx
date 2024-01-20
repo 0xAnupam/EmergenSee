@@ -43,7 +43,6 @@ export default function Login({ onRegister }) {
       // const token = response.data;
       // Cookies.set('ambulanceAI', token, { expires: 1 });
     } catch (err) {
-      console.log(err);
       toast.error(err);
     }
   };
