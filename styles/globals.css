@@ -1,0 +1,98 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: aliceblue;
+}
+
+/* scrollbar customizing -------------------------- */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(173, 173, 173);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(134, 134, 134);
+}
+
+.navBullet {
+  list-style: none;
+  text-decoration: none;
+  margin: 0px 20px;
+  font-weight: 600;
+  color: rgb(69, 68, 68);
+  cursor: pointer;
+}
+.selectedNavBullet {
+  list-style: none;
+  text-decoration: none;
+  margin: 0px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #f75023;
+}
+
+.wrongAnswer {
+  background: #dc4c64;
+  color: white;
+}
+.correctAnswer {
+  background: #14a44d;
+  color: white;
+}
+.quizDifficulty {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  padding: 4px 8px;
+  color: white;
+  font-size: 0.65rem;
+  border-radius: 5px;
+}
+.difficultyTag {
+  color: white;
+  border-radius: 4px;
+  display: inline-block;
+  padding: 4px 10px !important;
+  font-size: 0.7rem !important;
+}
+.easyColor {
+  background: #00b8a3;
+}
+.mediumColor {
+  background: #ffc01e;
+}
+.hardColor {
+  background: #ef4743;
+}
+
+@media (max-width: 570px) {
+  .difficultyTag {
+    padding: 4px 6px !important;
+    font-size: 0.6rem !important;
+  }
+}
+@media (max-width: 462px) {
+  .navBullet {
+    margin: 0px 10px;
+  }
+  .selectedNavBullet {
+    margin: 0px 10px;
+  }
+}
+
+select{
+  padding: 8px 20px;
+}
+.o2div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.o2Support{
+  font-size: .8rem;
+  margin-right: 10px;
+}
