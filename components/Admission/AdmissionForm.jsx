@@ -146,7 +146,7 @@ const AdmissionForm = () => {
         </div>
 
         <button type="submit" className={styles.submitButton}>
-          Submit Admission Form
+          Update
         </button>
       </form>
     </div>

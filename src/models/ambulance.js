@@ -15,5 +15,5 @@ const ambulanceSchema = new mongoose.Schema(
     }
 );
 
-const Ambulance = mongoose.models.Score || mongoose.model("Ambulance", ambulanceSchema);
+const Ambulance = mongoose.models.Ambulance || mongoose.model("Ambulance", ambulanceSchema);
 export default Ambulance;

@@ -1,15 +1,19 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "./BookAmbulance.module.css";
 import toast from "react-hot-toast";
 import axios from "axios";
+import AuthContext from "@/store/AuthContext";
 
 const BookAmbulance = () => {
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
   const [emergencyType, setEmergencyType] = useState("");
   const [oxygenSupport, setOxygenSupport] = useState(false);
+
+  const authCtx = useContext(AuthContext);
+  // console.log(authCtx);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,6 +33,7 @@ const BookAmbulance = () => {
         location,
         oxygenSupport,
         emergencyType,
+        email: authCtx.userData.email,
       });
       setName("");
       setLocation("");
