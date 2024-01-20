@@ -14,6 +14,7 @@ const ambulanceSchema = new mongoose.Schema({
   hospital_name: String,
   vehicle_no: String,
   driver_phone: String,
+  author: String
 });
 
 const Ambulance =

@@ -6,18 +6,35 @@ import BookAmbulance from "@/components/BookAmbulance/BookAmbulance";
 import AdmissionForm from "@/components/Admission/AdmissionForm";
 import { useContext, useEffect, useState } from "react";
 import AuthContext from "@/store/AuthContext";
+import axios from "axios";
 
 function Booking() {
   const [requests, setRequests] = useState([])
   const authCtx = useContext(AuthContext);
-  useEffect(()=>{
-    if(authCtx.isAuthenticated){
-      setRequests(authCtx.userData.requests);
-      // authCtx.userData.requests.map
+  useEffect(() => {
+    async function findRequests() {
+      if (authCtx.isAuthenticated) {
+        // setRequests(authCtx.userData.requests);
+        const reqIds = [];
+        for (let i = 0; i < authCtx.userData.requests.length; i++) {
+        // console.log(authCtx.userData.requests[i]._id)
+          await axios.get(`/api/ambulances/${authCtx.userData.requests[i]._id}`).then((res)=>{
+            reqIds.push(res.data);
+            // console.log(res.data);
+          }).catch((err)=>{
+            console.log(err);
+          })
+          
+        }
+        // console.log(reqIds)
+        setRequests(reqIds);
+      }
     }
+    findRequests();
+
   }, [authCtx.isAuthenticated])
 
-  
+
   return (
     <>
       <Navbar />
@@ -34,16 +51,16 @@ function Booking() {
 
       <br />
       <br />
-      {
-        requests && requests.map((data)=>{
+      {/* {
+        requests && requests.map((data) => {
           return (
-            <div>
-            <h2>hello</h2>
+            <div >
+              <h2>hello</h2>
               <button></button>
             </div>
           )
         })
-      }
+      } */}
     </>
   );
 }

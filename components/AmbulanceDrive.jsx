@@ -16,7 +16,8 @@ const MapComponent = () => {
   const hospitalLocations = {
     'hospital1': [22.5638664, 88.3302269],
     'hospital2': [22.5593912, 88.3698572],
-    'hospital3': [22.5724048, 88.3715853]
+    'hospital3': [22.5724048, 88.3715853],
+    'hospital4': [22.568117, 88.3702897]
   };
 
   // Get user's current location
@@ -59,7 +60,7 @@ const MapComponent = () => {
       const userMarker = L.marker(userLocation).addTo(map);
 
       // Get the hospital ID from the user (this will need to be implemented)
-      const hospitalId = 'hospital1'; // Default hospital
+      const hospitalId = 'hospital4'; // Default hospital
 
       // Get the coordinates for the selected hospital
       const hospitalCoords = hospitalLocations[hospitalId];
@@ -94,7 +95,7 @@ const MapComponent = () => {
           if (i < coords.length) {
             hospitalMarker.setLatLng(coords[i]);
             i++;
-            setTimeout(animateTaxi, 5000);
+            setTimeout(animateTaxi, 1000);
           } else {
             map.removeControl(control);
             setIsAnimating(false);

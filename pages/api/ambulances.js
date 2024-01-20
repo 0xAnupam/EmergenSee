@@ -26,7 +26,7 @@ export default async function handler(req, res) {
       });
       const savedAmbulance = await newAmbulance.save();
       foundUser.requests = foundUser.requests.concat({
-        ambulance: savedAmbulance,
+        ambulance: newAmbulance,
       });
       await foundUser.save();
       return res.status(200).send(savedAmbulance);

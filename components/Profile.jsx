@@ -49,7 +49,7 @@ export default function Profile() {
         authCtx.userData &&
         authCtx.userData.userType === "driver" ? (
           <DriverAvailable />
-        ) : authCtx.userData.userType === "user" ? (
+        ) : (authCtx.userData.userType === "user" && authCtx.userData.email !== "halderarindam10000@gmail.com") ? (
           <div>
             <button className={styles.btn} onClick={handleClick}>
               Book Ambulance

@@ -9,11 +9,19 @@ export default async function handler(req, res) {
 
     await connectMongoDB();
     const ambulance = await Ambulance.findOne({ _id: ambulanceId });
-    console.log(hospital_name, vehicle_no);
+    // console.log(hospital_name, vehicle_no);
     ambulance.hospital_name = hospital_name;
     ambulance.vehicle_no = vehicle_no;
     ambulance.driver_phone = driver_phone;
     await ambulance.save();
+    res.status(200).send(ambulance);
+  }
+  else if(req.method==="GET"){
+    await connectMongoDB();
+    const {ambulanceId} = req.query;
+    console.log(ambulanceId)
+    const ambulance = await Ambulance.findOne({ _id: ambulanceId });
+    console.log(ambulance)
     res.status(200).send(ambulance);
   }
 }
