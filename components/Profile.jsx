@@ -4,6 +4,7 @@ import Image from "next/image";
 import AuthContext from "@/store/AuthContext";
 import DriverAvailable from "./DriverAvailable";
 import { useRouter } from "next/router";
+import ViewRegistrations from "./ViewRegistrations";
 
 export default function Profile() {
   const authCtx = useContext(AuthContext);
@@ -48,13 +49,21 @@ export default function Profile() {
         authCtx.userData &&
         authCtx.userData.userType === "driver" ? (
           <DriverAvailable />
-        ) : (
+        ) : authCtx.userData.userType === "user" ? (
           <div>
             <button className={styles.btn} onClick={handleClick}>
               Book Ambulance
             </button>
           </div>
+        ) : (
+          <span></span>
         )}
+
+        {authCtx.isAuthenticated &&
+          authCtx.userData &&
+          authCtx.userData.email === "halderarindam10000@gmail.com" && (
+            <ViewRegistrations />
+          )}
       </div>
     </>
   );
