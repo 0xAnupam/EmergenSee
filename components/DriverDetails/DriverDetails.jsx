@@ -5,18 +5,22 @@ function Details(props) {
   const reg_id = props.reg_id;
   console.log(reg_id);
 
-  function handleClick() {
+  async function handleClick() {
     const data = {
       hospital_name: props.hospital_name,
       vehicleNo: props.vehicleNo,
       driver_phone: props.contactNo,
     };
     console.log(reg_id);
-    axios.patch(`/api/ambulances/${reg_id}`, {
-      hospital_name: data.hospital_name,
-      vehicle_no: data.vehicleNo,
-      driver_phone: data.driver_phone,
-    });
+    await axios
+      .post(`/api/ambulances/${reg_id}`, {
+        hospital_name: data.hospital_name,
+        vehicle_no: data.vehicleNo,
+        driver_phone: data.driver_phone,
+      })
+      .then((res) => {
+        console.log(res.data);
+      });
     props.onDriverData(data);
   }
   return (

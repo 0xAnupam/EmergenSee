@@ -86,7 +86,8 @@ export default function ViewRegistrations() {
   useEffect(() => {
     axios.get("/api/ambulances").then((res) => {
       console.log(res.data);
-      setRequests(res.data);
+      const filteredReq = res.data.filter((d) => d.hospital_name === undefined);
+      setRequests(filteredReq);
     });
   }, []);
 
