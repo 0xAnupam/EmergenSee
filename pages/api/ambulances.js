@@ -34,4 +34,19 @@ export default async function handler(req, res) {
       res.status(400).send({ msg: err });
     }
   }
+  else if(req.method === "PATCH"){
+    const { id, patientName, dob, gender, contactNo, address, admissionReason } = req.body;
+    console.log(req.body);
+
+    await connectMongoDB();
+    const ambulance = await Ambulance.findOne({_id: id});
+    ambulance.patientName = patientName;
+    ambulance.dob = dob;
+    ambulance.gender = gender;
+    ambulance.contactNo = contactNo;
+    ambulance.address = address;
+    ambulance.admissionReason = admissionReason;
+    await ambulance.save();
+    res.status(200).send(ambulance);
+  }
 }
